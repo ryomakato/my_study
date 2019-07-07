@@ -1,0 +1,98 @@
+#docker installation on ubuntus
+https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+# check images
+docker images
+
+# check container
+docker ps -a
+
+# pull a image
+docker pull IMAGE_NAME:TAG_NAME
+
+# run a image = make a container
+docker run -it --rm [--name CONTAINER_NAME] IMAGE_NAME:TAG_NAME [COMAND] [ARG]
+
+# make docker a image(from container)
+Docker commit {CONTAINER_NAME|CONTAINER_ID} [USER_NAME/]IMAGE_NAME
+
+# you may need login for pull command
+docker login
+
+# stop a container
+docker stop {CONTAINER_NAME|CONTAINER_ID}
+
+# restart a container(-i is for bash shell)
+docker start -i {CONTAINER_NAME|CONTAINER_ID}
+
+# remove a container
+docker rm {CONTAINER_NAME|CONTAINER_ID}
+
+# remove a image
+docker rmi {CONTAINER_NAME|CONTAINER_ID}
+
+-------------------------------------------------------------------------
+make a Dockerfile
+-------------------------------------------------------------------------
+(base)
+# comment
+COMMAND ARG
+
+命令	用途
+FROM	元となるDockerイメージの指定
+MAINTAINER	作成者の情報
+RUN	コマンドの実行
+ADD	ファイル／ディレクトリの追加
+CMD	コンテナーの実行コマンド 1
+ENTRYPOINT	コンテナーの実行コマンド 2
+WORKDIR	作業ディレクトリの指定
+ENV	環境変数の指定
+USER	実行ユーザーの指定
+EXPOSE	ポートのエクスポート
+VOLUME	ボリュームのマウント
+
+example1:
+
+$ mkdir nginx1
+~$ cd nginx1
+~/nginx1$ vim Dockerfile   
+
+
+FROM ubuntu
+MAINTAINER user_name <xxxx@gmail.com>
+RUN apt-get update
+RUN apt-get install -y nginx
+ADD index.html /usr/share/nginx/html/
+ENTRYPOINT /usr/sbin/nginx -g 'daemon off;' -c /etc/nginx/nginx.conf
+
+
+~/nginx1$ echo 'Hello!' > index.html
+~/nginx1$ ls
+Dockerfile  index.html
+~/nginx1$ 
+
+
+-------------------------------------------------------------------------
+build a Dockerfile
+-------------------------------------------------------------------------
+# build a Dockerfile
+docker build [-t IMAGE_NAME[:TAG]] DIR_OF_DOCKERFILE
+
+# upload images on dockerhub
+docker push USER_NAME/IMAGE_NAME
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
