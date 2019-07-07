@@ -1,6 +1,3 @@
-
-
-
 # make file
 touch FILE_NAME
 
@@ -43,5 +40,8 @@ rm FILE_NAME
 # remove dir
 rm -r DIR_NAME
 
+# open a app.
+open -a APPLICATION_NAME
 
-
+# quit a app.
+killall APPLICATION_NAME
