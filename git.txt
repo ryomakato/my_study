@@ -1,0 +1,37 @@
+# initialization of git
+git init
+
+# add file
+git add FILE_NAME
+
+# recode file
+git commit -m "COMMIT_MASSAGE"
+
+# register remote_address
+git remote add origin URL
+
+# upload file to remote
+git push origin master
+
+# download file
+git pull origin master
+
+# check your status
+git status
+
+# check changes
+git diff
+
+# check log
+git log
+
+# check changes on log (u can finish using "Q" key)
+git log -p
+
+# check version
+git --version
+
+# register account
+git config --global user.name "USER_NAME"
+git config --global user.email "USER_EMAIL_ADDRESS"
+
