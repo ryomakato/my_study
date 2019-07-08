@@ -29,8 +29,8 @@ ssh ACCOUNT_NAME_OF_UBUNTU@IP_ADDRESS -p PORT_NUMBER
 
 # make ssh key
 ssh-keygen -t ecdsa
-mv ~/.ssh/id_ecdsa.pub ~/.ssh/authorized_key
-chmod 600 ~/.ssh/authorized_key
+#mv ~/.ssh/id_ecdsa.pub ~/.ssh/authorized_key
+#chmod 600 ~/.ssh/authorized_key
 
 # send ssh key(ACCONT_NAME is to identify account)
 scp -P PORT_NUMBER ~/.ssh/id_ecdsa.pub ACCOUNT_NAME_OF_UBUNTU@IP_ADDRESS:~/id_ecdsa_ACCOUNT_NAME.pub
