@@ -1,0 +1,75 @@
+# install SSH on Ubuntu desktop 18.04 LTS
+sudo apt install openssh-server
+
+# config of SSH
+cd /etc/ssh
+Sudo nano sshd_config
+-------------------------------
+# line 13
+Port xxx
+
+# line 32
+PermitRootLogin no
+-------------------------------
+
+# restart ssh
+sudo systemctl restart ssh
+
+# restart ssh(other method)
+sudo service ssh restart
+
+# check IP address for local
+ip addr
+
+# check fingerprint of ECDSA key on Ubuntu
+ssh-keygen -lf /etc/ssh/ssh_host_ecdsa_key.pub
+
+# login to ubuntu
+ssh ACCOUNT_NAME_OF_UBUNTU@IP_ADDRESS -p PORT_NUMBER
+
+# make ssh key
+ssh-keygen -t ecdsa
+mv ~/.ssh/id_ecdsa.pub ~/.ssh/authorized_key
+chmod 600 ~/.ssh/authorized_key
+
+# send ssh key(ACCONT_NAME is to identify account)
+scp -P PORT_NUMBER ~/.ssh/id_ecdsa.pub ACCOUNT_NAME_OF_UBUNTU@IP_ADDRESS:~/id_ecdsa_ACCOUNT_NAME.pub
+
+# register ssh key on ubuntu
+mkdir .ssh
+chmod 700 .ssh
+cat id_ecdsa_ACCOUNT_NAME.pub >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+rm id_ecdsa_ACCOUNT_NAME.pub
+
+# config in /.ssh
+vi ~/.ssh/config
+---------------------------------
+Host *
+  AddKeyschain yes
+  Usekeychain yes
+  IdentityFile ~/.ssh/id_rsa
+
+Host COMMAND_NAME
+  hostname IP_ADDRESS
+  port PORT_NUMBER
+  User ACCOUNT_NAME_OF_UBUNTU
+  IdentityFile ~/.ssh/id_ecdsa
+---------------------------------
+
+# make invalid of enter with password
+sudo vi /etc/ssh/sshd_config
+---------------------------------
+# /Password && o
+PasswordAuthentication no
+---------------------------------
+
+# change config of password
+cd /etc/ssh
+sudo nano sshd_config
+---------------------------------
+# line 56
+PasswordAuthentication no
+---------------------------------
+
+
