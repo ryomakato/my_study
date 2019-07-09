@@ -49,3 +49,10 @@ killall APPLICATION_NAME
 # show tail of file and follow new writing
 tail -f /var/log/syslog
 tail -f /var/log/auth.log
+
+# check version
+cat /etc/or-release
+df -h
+free -h
+cat /proc/cpuinfo
+nvidia-smi

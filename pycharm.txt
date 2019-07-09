@@ -1,0 +1,31 @@
+--------------------------------
+ssh configuration
+--------------------------------
+PyCharm => Preferences => Project Interpreter => add
+SSH Interpreter => New server configuration
+
+Host: IP_ADDRESS
+Username: USER_NAME_ON_REMOTE
+
+Key pair
+  Private key file: CHOOSE_SSH_PRIVATE_KEY
+  Passphrase: IF_YOU_HAVE_PASSPHRASE
+
+Interpreter: CHOOSE_INTER_PRETER
+
+# after finishing configuration, please restart PyCharm
+
+--------------------------------
+Autoupdate configuration
+--------------------------------
+# turn off Automatic Upload
+Tools => Development => Automatic Upload 
+
+# upload file
+Tools => Development => Sys with...
+
+--------------------------------
+ssh with Docker
+--------------------------------
+
+

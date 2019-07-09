@@ -1,5 +1,11 @@
-#docker installation on ubuntus
+# docker installation on ubuntus
 https://docs.docker.com/install/linux/docker-ce/ubuntu/
+
+# run docker without sudo
+sudo groupaad docker
+sudo gpasswd -a $USER docker
+sudo systemctl restart docker
+exit
 
 # check images
 docker images
