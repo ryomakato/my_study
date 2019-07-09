@@ -45,3 +45,7 @@ open -a APPLICATION_NAME
 
 # quit a app.
 killall APPLICATION_NAME
+
+# show tail of file and follow new writing
+tail -f /var/log/syslog
+tail -f /var/log/auth.log
