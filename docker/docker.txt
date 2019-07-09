@@ -83,6 +83,8 @@ build a Dockerfile
 -------------------------------------------------------------------------
 # build a Dockerfile
 docker build [-t IMAGE_NAME[:TAG]] DIR_OF_DOCKERFILE
+# ex)
+docker build -t IMAGE_NAME .
 
 # upload images on dockerhub
 docker push USER_NAME/IMAGE_NAME

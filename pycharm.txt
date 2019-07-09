@@ -23,9 +23,3 @@ Tools => Development => Automatic Upload
 
 # upload file
 Tools => Development => Sys with...
-
---------------------------------
-ssh with Docker
---------------------------------
-
-
