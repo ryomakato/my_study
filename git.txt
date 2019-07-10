@@ -4,8 +4,79 @@ git init
 # add file
 git add FILE_NAME
 
+# remove file
+git rm FILE_NAME
+git rm --cached FILE_NAME
+git rm --cached `git ls-files --full-name -i --exclude-from=.gitignore`
+
+# move file
+git mv FILE_NAME
+
+# ignore file
+# if you want to keep a void directory, add .gitkeep to the directory.
+vi .gitignore
+---------------------------------------
+*.log
+tmp/*
+!tmp/deep
+!.gitkeep
+---------------------------------------
+
+# checkout file(remove from added area)
+git checkout -- FILE_NAME
+
 # recode file
 git commit -m "COMMIT_MASSAGE"
+
+# add & commit
+git commit -am "MESSAGE"
+
+# commit small changes without message 
+git commit --amend
+
+# back to commit
+# previous
+git reset --hard HEAD
+# before previous
+git reset --hard HEAD^
+# ID
+git reset __hard ID
+
+# back to reseted ID
+git reset --hard ORIG_HEAD
+
+# git branch
+git branch
+
+# make branch
+git branch BRANCH_NAME
+
+# change branch
+git checkout BRANCH_NAME
+
+# make BRAMCH and change it
+git checkout -b BRANCH_NAME
+
+# reflect to master
+git merge BRANCH_NAME
+
+# make conflict
+=> revise
+
+# make tag current
+git tag VERSION_NAME
+
+# make tag others
+git tag VERSION_NAME ID_HEAD
+
+# remove tag
+git tag -d VERSION_NAME
+
+# show
+git show VERSION_NAME
+
+# rm branch
+git branch -d BRANCH_NAME
 
 # register remote_address
 git remote add origin URL
@@ -22,11 +93,16 @@ git status
 # check changes
 git diff
 
+# check changes on committing area
+git diff --cached
+
 # check log
 git log
+git log --online
 
 # check changes on log (u can finish using "Q" key)
 git log -p
+git log --stat
 
 # check version
 git --version
@@ -35,3 +111,36 @@ git --version
 git config --global user.name "USER_NAME"
 git config --global user.email "USER_EMAIL_ADDRESS"
 
+# configuration of color
+git config --global color.ui true
+
+# check config 
+git config -l
+
+# alias
+git config --global alias.co checkout
+git config --global alias.st status
+
+git config -l
+
+# make share repository(GitHub)
+-1. make share repository
+mkdir REPOSITORY_NAME.git
+git init --bare
+
+-2. A worker
+git remote add origin ~/REPOSITORY_NAME.git
+(git remote rm ...)
+git push origin master
+
+-3. B worker
+git clone ORIGINAL_REPOSITRY.git [NAME]
+git add.
+git commit -m "COMMENT"
+git push origin master
+
+-4. A worker
+git pull origin master
+
+# conflict on share repository
+git pull origin master
