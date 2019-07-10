@@ -34,8 +34,17 @@ docker start -i {CONTAINER_NAME|CONTAINER_ID}
 # remove a container
 docker rm {CONTAINER_NAME|CONTAINER_ID}
 
+# remove all containers
+docker ps -aq | xargs docker rm
+
 # remove a image
 docker rmi {CONTAINER_NAME|CONTAINER_ID}
+
+# remove all images
+docker images -aq | xargs docker rmi
+
+# access docker container again
+docker attach CONTAINER_ID
 
 -------------------------------------------------------------------------
 make a Dockerfile
@@ -89,9 +98,18 @@ docker build -t IMAGE_NAME .
 # upload images on dockerhub
 docker push USER_NAME/IMAGE_NAME
 
+-------------------------------------------------------------------------
+GUI for MAC on Docker
+-------------------------------------------------------------------------
+1. Install XQuartz
+2. Run XQartz => Preferences => Security => Allow connections from network clients
+3. Restart XQartz
+4. Run below code on shell of XQartz
 
-
-
+xhost + 127.0.0.1
+docker run -e DISPLAY=docker.for.mac.localhost:0 CONTAINER_NAME
+(You can mount by -v option like -v HOST:LOCAL)
+ex. -v ~/Documents:/var/shared 
 
 
 
