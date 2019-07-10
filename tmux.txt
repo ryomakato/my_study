@@ -1,5 +1,5 @@
 # install tmux on Mac
-brew install tux
+brew install tmux
 
 # install tmux on ubuntu
 sudo apt install tmux

@@ -129,7 +129,7 @@ mkdir REPOSITORY_NAME.git
 git init --bare
 
 -2. A worker
-git remote add origin ~/REPOSITORY_NAME.git
+git remote add origin ./REPOSITORY_NAME.git
 (git remote rm ...)
 git push origin master
 

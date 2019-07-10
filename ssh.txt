@@ -3,7 +3,7 @@ sudo apt install openssh-server
 
 # config of SSH
 cd /etc/ssh
-Sudo nano sshd_config
+sudo nano sshd_config
 -------------------------------
 # line 13
 Port xxx
