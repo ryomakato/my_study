@@ -40,7 +40,7 @@ git reset --hard HEAD
 # before previous
 git reset --hard HEAD^
 # ID
-git reset __hard ID
+git reset --hard ID
 
 # back to reseted ID
 git reset --hard ORIG_HEAD
