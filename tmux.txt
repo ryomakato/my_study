@@ -24,6 +24,9 @@ operation on tmux
 # default key
 prefix = ctrl + b
 
+# detach
+prefix + d
+
 コマンド	動作
 Prefix + %	横に新しいペインを作成
 Prefix + "	縦に新しいペインを作成
