@@ -1,0 +1,189 @@
+# insert mode
+i -> Ctrl c or Esc
+
+# comand mode
+:
+
+# visual mode
+v -> Ctrl c or Esc
+V	(choose line unit)
+Ctrl V	(choose colom line unit)
+gg + V + G  (select all)
+
+# cut(remove) copy paste
+x		(delete a char)
+dd		(delete a line)
+NUMBER dd	(delete NUMBER LINE)
+p		(paste)
+yy		(copy)
+NUMBER yy	(copy NUMBER LINE)
+
+# search
+/SERCH_WORLD
+n	(next)
+N	(previous)
+*	(serch above of word on mouse)
+#	(serch below of word on mouse)
+
+# replace world
+:s/WORD/REPLACE_WORD		(substitute)
+:s/WORD/REPLACE_WORD/g		(line)
+:%s/WORD/REPLACE_WORD/g  	(file)
+:%s/WORD/REPLACE_WORD/g/c	(confim)
+
+# undo redo
+u		(unod)
+Ctrl + R	(redo)
+
+# divide windows
+:sp		(make colom windows)
+:vs		(make row windows)
+Ctrl + w	(move selected wondow)
+:close		(close a window)
+
+# auto complate
+Ctrl + n	(auto complate)
+
+# repleace world with row
+Ctil + v + I + WORD	(substitude)
+Ctrl + v + x		(delete)
+
+# text object
+cit	(c/d/y change delete & insert i/a content or all t/"/)/ tag)
+
+# make tap
+:tabnew		(make a tab)
+:tabe FILE_NAME (open FILE with tab)
+gt		(go to next tab)
+:tabclose	(close a tab)
+vim -p FILE_NAME1 FILE_NAME2 (open files)
+:tabdo %s/WORD/REPLACE_WORD  (substitude on all files)
+
+# repeat doing
+.	(repeat previou dogin)
+
+# adjust indent
+=	(adjust indent)
+gg + V + G + =
+
+# save file
+:w
+# save as a new file
+:w NEW_FILE_NAME
+
+# quit
+:q
+# delete change
+:q!
+
+# open other file
+:e FILE_NAM
+
+# move(normal mode)
+gg	(go to top)
+G	(go to below)
+Ctrl f	(go to next window)
+Ctrl b	(go to back window)
+w	(go to newt word)
+b	(go to back word)
+te
+
+# save file
+:w
+# save as a new file
+:w NEW_FILE_NAME
+
+# quit
+:q
+# delete change
+:q!
+
+# open other file
+:e FILE_NAM
+
+# move(normal mode)
+gg	(go to top)
+G	(go to below)
+Ctrl f	(go to next window)
+Ctrl b	(go to back window)
+w	(go to newt word)
+b	(go to back word)
+te
+
+# save file
+:w
+# save as a new file
+:w NEW_FILE_NAME
+
+# quit
+:q
+# delete change
+:q!
+
+# open other file
+:e FILE_NAM
+
+# move(normal mode)
+gg	(go to top)
+G	(go to below)
+Ctrl f	(go to next window)
+Ctrl b	(go to back window)
+w	(go to newt word)
+b	(go to back word)
+te
+
+# save file
+:w
+# save as a new file
+:w NEW_FILE_NAME
+
+# quit
+:q
+# delete change
+:q!
+
+# open other file
+:e FILE_NAM
+
+# move(normal mode)
+gg	(go to top)
+G	(go to below)
+Ctrl f	(go to next window)
+Ctrl b	(go to back window)
+w	(go to newt word)
+b	(go to back word)
+te
+
+# save file
+:w
+# save as a new file
+:w NEW_FILE_NAME
+
+# quit
+:q
+# delete change
+:q!
+
+# open other file
+:e FILE_NAM
+
+# move(normal mode)
+gg	(go to top)
+G	(go to below)
+Ctrl f	(go to next window)
+Ctrl b	(go to back window)
+w	(go to newt word)
+b	(go to back word)
+^	(go to top of line)
+$	(go to back of line)
+f[char]	(go to char and ; = go to next char)
+%	(go to end of bucket)
+
+ 
+
+
+
+
+
+
+

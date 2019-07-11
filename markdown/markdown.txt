@@ -1,0 +1,94 @@
+# official site
+https://daringfireball.net/projects/markdown/
+
+# online editor
+http://jbt.github.io/markdown-editor/
+
+# docker hub(install atom editor)
+docker pull jamesnetherton/docker-atom-editor
+# run below code on XQuartz
+xhost + 127.0.0.1
+docker run -d --rm -e DISPLAY=docker.for.mac.localhost:0 atom
+(You can mount by -v option)
+
+# extension
+.md
+
+# list
+- LIST1
+- LIST2
+
+# code
+```
+
+CONTENT_OF_CODE
+
+```
+
+# heading
+
+# h1 title
+## h2 title
+### h3 title
+###### h6 title
+
+# make paragraph
+test test
+
+test test
+ 
+test test  (<= need two blank)
+test test
+
+# reference
+> test test  
+test test
+
+# make partition 
+---
+***
+"""
+- - -
+
+# emphasis 
+_test_
+__test__
+**test**
+
+# list
+- item1
++ item2  (<= 2 blank)
+    Hello world
+    Hello world
+* item3
+
+# list with number
+1. Item1
+2. Item2
+3. Item3
+
+1. Item1
+1. Item2
+1. item3
+
+# expression of link
+<https://github.com>
+[github](https://github.com)
+[github](https://github.com "this is GitHub")
+
+# expression of code(back quantitation)
+```
+function x(){
+  Return x:
+  }
+```
+
+	function x(){
+	  Return x:
+	  }
+
+This is `return x;` function.
+
+# put images
+![logo image](http://dotinstall.com/img/logo_200x200.ong "dotinstall!")
+[![logo image](http://dotinstall.com/img/logo_200x200.ong "dotinstall!")](http://dotinstall.com)

@@ -1,0 +1,138 @@
+# make dir
+mkdir app{1..40}
+
+# user dir
+~
+
+# adomin
+#
+
+# some command
+pwd
+clear or Ctrl + l
+mkdir -p	(if not exsis)
+rmdir 		(only for empty dir)
+
+cat
+less
+
+# command history and run NUMBER
+history
+!NUMBER
+!!
+!-2
+cd !$		(!% is previous arg)
+!COMMAND_NAME	(run command witout all name of command)
+!COMMAND_NAME:p	(show command)
+
+# search history of command
+Ctrl + r	(you can do this command many times)
+
+# manual of command
+man COMMAND
+
+# make simbolic link
+ln -s ADDRESS NAME
+unlink NAME
+
+# user and group
+cat /etc/passwd
+cat /etc/group
+
+# permission
+chmod NUMBER_OR_CHAR DIRECTORY_OF_FILE
+user group other
+r w x (read write excute)
+4 2 1
+
+# make a command
+type COMMAND_NAME
+
+vi COMMAND_NAME
+----------------
+#!/bin/bash
+echo "HELLO WORLD"
+-----------------
+ls -l
+chmod 700 COMMAND_NAME
+./NAME
+
+# show command pass
+echo $PATH
+export PATH=FILE_ADDRESS:$PATH
+which COMMAND
+
+# show env var
+printenv
+
+# adomin
+ls -l /var/log/messages	(system log)
+cat !$
+su
+sudo
+
+# copy log(change owner)
+cp /var/log/messages .
+sudo !!
+sudo chown NAME:GROUP FILE_NAME
+
+#
+wc FILE		(word count)
+wc -f FILE	(number of line)
+head -3 FILE
+tail -3 FILE
+grep 'WORD' FILE (search word)
+
+# redirection
+echo "WORD" > FILE
+echo "WORD" >> FILE	(add to last of file)
+bash < FILE > FILE2	(give bash FILE and (bash < FILE) > FILE2)
+
+ls -l /etc | grep "php" | we -l
+
+# world card
+ls /etc/*.conf
+ls /etc/c??.*
+
+# find
+find DIR -name "http*"
+sudo !!
+find DIR -name "http*" -type f			(only for file)
+find DIR -name "http*" -type f -exce wc -l {} +	(exce command)
+find DIR -name "http*" -type f | xargs we -l	(exce many command)
+
+# breace extention
+{a,b,c}
+{1..10}{a..g}
+mkdir test && cd test
+mkdir app{1..5}
+touch app{1..5}/test{1..3}{.txt,.jpeg,.gif}
+rm app{1..5}/test{1..3}{.jpeg,.gif}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

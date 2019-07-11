@@ -1,0 +1,58 @@
+# make file
+touch FILE_NAME
+
+# show file content
+cat FILE_NAME
+
+# make dir
+mkdir FILE_NAME
+
+# change dir
+cd FILE_NAME
+
+# show current dir
+pwd
+
+# show dir content
+ls
+
+# back to prior dir
+cd ..
+
+# back to home dir
+Cd
+
+# move dir
+mv FILE_NAME PLACE
+
+# change file name
+mv CURRENT_FILE_NAME NEW_FILE_NAME
+
+# copy file
+cp FILE_NAME NEW_FILE_NAME
+
+# copy dir
+cp -r DIR_NAME NEW_DIR_NAME
+
+# remove file
+rm FILE_NAME
+
+# remove dir
+rm -r DIR_NAME
+
+# open a app.
+open -a APPLICATION_NAME
+
+# quit a app.
+killall APPLICATION_NAME
+
+# show tail of file and follow new writing
+tail -f /var/log/syslog
+tail -f /var/log/auth.log
+
+# check version
+cat /etc/or-release
+df -h
+free -h
+cat /proc/cpuinfo
+nvidia-smi
