@@ -72,4 +72,5 @@ sudo nano sshd_config
 PasswordAuthentication no
 ---------------------------------
 
-
+# copy a ssh key on MAC
+cat ~/.ssh/id_rsa.pub | pbcopy
