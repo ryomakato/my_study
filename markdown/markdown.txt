@@ -92,3 +92,4 @@ This is `return x;` function.
 # put images
 ![logo image](http://dotinstall.com/img/logo_200x200.ong "dotinstall!")
 [![logo image](http://dotinstall.com/img/logo_200x200.ong "dotinstall!")](http://dotinstall.com)
+![pokemon go](https://pokemongolive.com/img/homepage/pokemon-go-cam-mode.webm "pokemon Go"]
