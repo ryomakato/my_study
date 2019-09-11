@@ -29,8 +29,8 @@ At the bottom of the file, add the following lines:
 
 Now that we have our new share configured, save it and restart Samba for it to take effect:
 ```bash
-sudo service smbd restart
-sudo ufw allow samba
+$ sudo service smbd restart
+$ sudo ufw allow samba
 ```
 ## 3. Setting up User Accounts and Connecting to Share
 Since Samba doesn't use the system account password, we need to set up a Samba password for our user account:
