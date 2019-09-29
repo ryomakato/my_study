@@ -39,8 +39,12 @@ $ sudo smbpasswd -a username
 ```
 **Connecting to Share**
 - ubuntu, mac
+```bash
+$ smb://ip-address/sambashare
 ```
-smb://ip-address/sambashare
+or
+```bash
+$ smb://ip-address
 ```
 or mount(MAC)
 ```bash
