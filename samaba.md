@@ -40,11 +40,16 @@ $ sudo smbpasswd -a username
 **Connecting to Share**
 - ubuntu, mac
 ```
-smb:\\ip-address\sambashare
+smb://ip-address/sambashare
 ```
-or mount
+or mount(MAC)
 ```bash
-$ mount -t smbfs //user@IP_ADDRESS/sambashare   /Volumes/sambashare
+$ mount -t smbfs //user@IP_ADDRESS/sambashare /Volumes/sambashare
+```
+or mount(Ubuntu)
+```bash
+$ sudo apt-get install cifs-utils
+$ sudo mount -t cifs -o "username=USERNAME,password=PASSWORD" //user@IP_ADDRESS/sambashare /Volumes/sambashare
 ```
 NOTE: This is how to unmount:
 ```bash
@@ -52,5 +57,5 @@ $ umount /Volumes/sambashare
 ```
 - windows
 ```
-\\ip-address\sambashare
+//ip-address/sambashare
 ```
