@@ -74,3 +74,6 @@ PasswordAuthentication no
 
 # copy a ssh key on MAC
 cat ~/.ssh/id_rsa.pub | pbcopy
+
+# check attacks from hacker
+cat /var/log/auth.log | grep sshd
