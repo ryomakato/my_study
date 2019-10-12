@@ -111,7 +111,18 @@ docker run -e DISPLAY=docker.for.mac.localhost:0 CONTAINER_NAME
 (You can mount by -v option like -v HOST:LOCAL)
 ex. -v ~/Documents:/var/shared 
 
+# delete network
+# ネットワーク検証
+docker network inspect ネットワーク名
 
+# "Containers"に書かれているコンテナを停止
+docker stop コンテナ名
+
+# network削除
+docker network rm ネットワーク名
+
+# 確認
+docker network ls
 
 
 
