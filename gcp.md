@@ -27,3 +27,8 @@ $ sudo timedatectl set-timezone Asia/Tokyo
 ```
 ## 4. set alart
 "お支払い"=>"予算とアラート"
+
+### make password for sudo if you want
+```bash
+$ sudo passwd root
+```
